@@ -18,3 +18,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+
+# Generated Output
+email_scraper/urls.csv
+emails.csv
