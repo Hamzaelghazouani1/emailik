@@ -1,0 +1,46 @@
+<nav class="sticky top-0 w-full z-20  bg-gray-50 px-24">
+    <div
+      class="flex flex-wrap border-b-2 border-b-gray-200 items-center justify-between py-4 w-full"
+    >
+      <a routerLink="/" class="flex  justify-center items-center space-x-3">
+        <img src="/brand/logo.svg" class="h-10" alt="EmaiLik Logo" />
+        <span class="font-sans font-bold text-4xl text-gray-700">EmaiLik</span>
+      </a>
+      <div class="flex items-center md:order-2 space-x-3">
+        
+          <a routerLink="/login" class="hover:text-primary-700"> Login </a>
+          <button class="bg-primary-700 capitalize text-primary-50 py-2 px-4 hover:bg-primary-50 ease-in-out duration-300 hover:text-primary-700 border-2 hover:border-primary-700" routerLink="/signup"> Get started </button>
+        <button
+          data-collapse-toggle="navbar-sticky"
+          type="button"
+          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm md:hidden"
+          aria-controls="navbar-sticky"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Open main menu</span>
+          <i class="ri-menu-line ri-2x"></i>
+        </button>
+      </div>
+      <div
+        class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+        id="navbar-sticky"
+      >
+        <ul
+          class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:space-x-8 md:flex-row md:mt-0 md:border-0"
+        >
+          @for (link of links; track $index) {
+            <li>
+              <a
+                [routerLink]="link.path"
+                class="block py-2 px-3 hover:text-white hover:bg-primary-800 rounded md:hover:bg-transparent md:hover:text-primary-700 md:p-0"
+                aria-current="page"
+              >
+                {{ link.label }}
+              </a>
+            </li>
+          }
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
